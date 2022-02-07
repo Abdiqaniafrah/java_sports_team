@@ -36,4 +36,30 @@ public class TeamService {
         // return count
         return count;
     }
+
+    public void addPlayerToTeam (Team team, Player player) throws Exception{
+        // check if there's space on the team
+        // for loop from earlier
+        int spaces = countEmptySpacesOnTeam(team);
+        // if there is space, add player
+        if (spaces > 0){
+            // get players array from the team(call)
+            Player[] players = team.getPlayer();
+            // create a variable to store
+            // add  player to first available empty space
+            // loop through array to find first empty space
+            // to set first players exactly were the first space is in the index
+            for (int i = 0; i < players.length; i++) {
+            // if we find an empty space, add the player then break
+                if (players[i] == null){
+                    players[i] = player;
+                    break;
+                }
+            }
+            // if we find an empty space, add the player then break
+        }
+        else{
+            throw new Exception();
+        }
+    }
 }

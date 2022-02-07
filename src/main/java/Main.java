@@ -15,7 +15,16 @@ public class Main {
         // create a teamService object
         TeamService teamService = new TeamService();
 
-        int spaces = teamService.countEmptySpacesOnTeam(england);
-        System.out.println(spaces);
+        int spacesBefore = teamService.countEmptySpacesOnTeam(scotland);
+        System.out.println(spacesBefore);
+        //
+        try {
+            teamService.addPlayerToTeam(scotland, player);
+        } catch (Exception e) {
+            System.out.println("team is full");;
+        }
+
+        int spacesAfter = teamService.countEmptySpacesOnTeam(scotland);
+        System.out.println(spacesAfter);
     }
 }

@@ -3,6 +3,7 @@ package players;
 import java.util.Objects;
 
 public class Player {
+    public int length;
     // Properties
     // must be private so user doesn't have access to it and cannot change them
     private String name;
