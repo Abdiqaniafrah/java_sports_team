@@ -62,7 +62,7 @@ public class Player {
                 ", contractLength=" + contractLength +
                 '}';
     }
-
+    // overriding the behaviour of just checking the objects if they are in the same memory location - last line compares the values and content and not memory location
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -70,7 +70,7 @@ public class Player {
         Player player = (Player) o;
         return number == player.number && contractLength == player.contractLength && Objects.equals(name, player.name) && Objects.equals(position, player.position);
     }
-
+    // it generates the hex decimal (location in memory)
     @Override
     public int hashCode() {
         return Objects.hash(name, position, number, contractLength);
