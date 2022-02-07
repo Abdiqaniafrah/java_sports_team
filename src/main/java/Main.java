@@ -12,9 +12,10 @@ public class Main {
         Team england = new Team("england", manager);
 
 
-        // need to make an instance
+        // create a teamService object
         TeamService teamService = new TeamService();
-        int spaces = teamService.countEmptySpacesOnTeam(scotland);
+
+        int spaces = teamService.countEmptySpacesOnTeam(england);
         System.out.println(spaces);
     }
 }
