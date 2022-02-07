@@ -1,10 +1,13 @@
-package pojos;
+package teams;
+
+import managers.Manager;
+import players.Player;
 
 import java.util.Arrays;
 import java.util.Objects;
 
 public class Team {
-    private Player [] player;
+    private Player[] player;
     private String name;
     private Manager manager;
     // use can use any class as a data type
